@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    body {
+    background-color: pink;
+    }
+
+   .modal {
+       /* display: flex;
+       justify-content:center;
+       align-items: center; */
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       right: 0;
+       left: 0;
+        background-color: rgba(0, 0, 0, 0.185);
+    }
+    table th{
+        border-right: 1px solid black;
+    }
+    span {
+        cursor: pointer;
+    }
+
+    .modal-content {
+        
+        width: 50%;
+        height: 50%;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+     span {
+         display: inline-block;
+         font-size: 40px;
+     }
+
+     span:hover {
+         color: red;
+     }
+
+</style>
+<body>
+    <div>
+        <table id="tabela">
+
+        <tr>
+            <th>
+                Edição
+            </th>
+            <th>
+                Matrícula
+            </th>
+            <th>
+                Aluno
+            </th>
+            <th>
+                Telefone
+            </th>
+            <th>
+                E-Mail
+            </th>
+            <th>
+                Nota 1
+            </th>
+            <th>
+                Nota 2
+            </th>
+            <th>
+                Nota 3
+            </th>
+        </tr>
+    </table>
+        <input type="button" value="Adicionar Aluno" id="addAluno">
+    </div>
+
+   
+
+    <div id="id01" class="modal" hidden>
+        <div class="modal-content">
+            <div>
+                <span id="botaoDesaparecer">&times;</span>
+            </div>
+            
+            <form>
+                <label for="matricula">Matrícula do aluno</label>
+                <input type="number" class="matricula" placeholder="jreiu">
+
+                <label for="nomeAluno">Nome do aluno</label>
+                <input type="text" class="nome" placeholder="Digite o nome do aluno">
+
+                <label for="telefoneAluno">Fone do aluno</label>
+                <input type="number" class="fone" placeholder="Digite o telefone do aluno">
+
+                <label for="email">E-Mail do aluno</label>
+                <input type="email" class="email" placeholder="Digite o E-Mail do aluno" required>
+
+                <input type="button" class="salvarAluno" value="Salvar">
+            </form>
+            
+        </div>
+    </div>
+
+
+
+    <script src="criar linha.js"></script>
+</body>
+</html>
